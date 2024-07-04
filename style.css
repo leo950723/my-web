@@ -1,106 +1,133 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&display=swap');
 
-@media (max-width: 768px) {
-  .P {
-    font-size: 0.8rem;
-    width: 40%;
-  
-  }
-
-
-  body {
-    background: url("background.jpg") no-repeat;
-  }
-
-  .navbar li {
-    display: inline-block;
-    padding: 0px 20px;
-  }
-
-  .navbar li a {
-    transition: all 0.3s ease;
-  }
-
-  .container_1 {
-    height: 150px;
-    text-align: center;
-    line-height: 100px;
-    padding: 10px 10%;
-    font-size: 30px;
-    font-family: "montserrat", sans-serif;
-  }
-
-  .navbar li a:hover {
-    color: #D55663;
-
-
-  }
-
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 10%;
-  }
-
-}
-
+/* 確保所有元素的 margin 和 padding 設置為 0，並設置 box-sizing 為 border-box */
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
-
+  box-sizing: border-box;
 }
 
+/* 設置全局的字體和背景色 */
 body {
-  background: url("background.jpg") no-repeat;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  transition: background-color 0.3s;
+  /* 添加背景色的過渡效果 */
 }
 
-li,
-a,
-button {
-  font-family: "montserrat", sans-serif;
-  font-weight: 500;
-  font-size: 20px;
-  color: #edf0f1;
-  text-decoration: none;
-
-
-}
-
-
-
-
+/* 設置 header 的樣式 */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 10%;
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
 }
 
+/* 設置 logo 的樣式 */
+.Logo {
+  font-size: 24px;
+  color: white;
+  text-decoration: none;
+}
 
+/* 設置導航菜單的樣式 */
+.navbar ul {
+  display: flex;
+  list-style-type: none;
+  transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+  /* 添加過渡效果 */
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.navbar ul.show {
+  max-height: 500px;
+  /* 根據實際內容高度調整 */
+  opacity: 1;
+}
 
 .navbar li {
-  display: inline-block;
-  padding: 0px 20px;
+  margin: 0 10px;
 }
 
-.navbar li a {
-  transition: all 0.3s ease;
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  transition: background-color 0.3s, color 0.3s;
+  /* 添加過渡效果 */
 }
 
-
-.navbar li a:hover {
-  color: #D55663;
-
-
+.navbar a:hover {
+  background-color: #555;
+  /* 背景色變化 */
+  color: #ffcc00;
+  /* 字體顏色變化 */
 }
 
+/* 響應式設計：在小屏幕上調整導航菜單 */
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+    width: 100%;
+    display: flex;
+  }
+
+  .navbar li {
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  header {
+    flex-direction: column;
+  }
+
+  .menu-toggle {
+    display: block;
+    /* 顯示按鈕 */
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s, color 0.3s;
+    /* 添加過渡效果 */
+  }
+
+  .menu-toggle:hover {
+    background-color: #555;
+    /* 背景色變化 */
+    color: #ffcc00;
+    /* 字體顏色變化 */
+  }
+
+  .menu-toggle:active {
+    background-color: #777;
+    /* 按下時背景色變化 */
+    color: #fff;
+    /* 按下時字體顏色變化 */
+  }
+}
+
+/* 在大屏幕上隱藏菜單按鈕 */
+@media (min-width: 769px) {
+  .menu-toggle {
+    display: none;
+  }
+
+  .navbar ul {
+    display: flex;
+    max-height: none;
+    opacity: 1;
+  }
+}
+
+/* 主內容容器的樣式 */
 .container_1 {
-  height: 150px;
-  text-align: center;
-  line-height: 100px;
-  padding: 10px 10%;
-  font-size: 30px;
-  font-family: "montserrat", sans-serif;
+  padding: 20px;
 }

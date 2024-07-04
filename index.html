@@ -1,23 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>web practise</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Practise</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
-
-
   <header>
     <div>
       <a href="#" class="Logo">Logo</a>
     </div>
-
-    <div class=list>
-      <nav class=" navbar">
+    <div class="list">
+      <nav class="navbar">
         <ul>
           <li><a href="#" class="P">主頁</a></li>
           <li><a href="#" class="P">商店</a></li>
@@ -27,13 +24,20 @@
         </ul>
       </nav>
     </div>
+    <button class="menu-toggle">顯示更多</button>
   </header>
   <div class="container_1">
-
-
-
+    <!-- 主內容 -->
   </div>
 
+  <script>
+    // JavaScript 用於顯示/隱藏菜單
+    document.querySelector('.menu-toggle').addEventListener('click', function () {
+      document.querySelector('.navbar ul').classList.toggle('show');
+      // 添加過渡效果
+      document.body.style.backgroundColor = document.body.style.backgroundColor === 'white' ? '#f5f5f5' : 'white';
+    });
+  </script>
 </body>
 
 </html>
