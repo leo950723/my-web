@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&display=swap');
 
-
+@media (max-width: 575px);
 
 * {
   box-sizing: border-box;
@@ -9,8 +9,8 @@
 
 }
 
-body 
-{ background:url("background.jpg") no-repeat;
+body {
+  background: url("background.jpg") no-repeat;
 }
 
 li,
@@ -24,9 +24,11 @@ button {
 
 
 }
+
 .Logo {
-  font-size:30px;
+  font-size: 30px;
 }
+
 header {
   display: flex;
   justify-content: space-between;
@@ -43,8 +45,11 @@ header {
   transition: all 0.3s ease;
 }
 
+
 .navbar li a:hover {
   color: #D55663;
+
+  ;
 }
 
 .container_1 {
