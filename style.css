@@ -9,8 +9,8 @@
 
 }
 
-body {
-  background-color: #748B6F;
+body 
+{ background:url("background.jpg") no-repeat;
 }
 
 li,
@@ -24,7 +24,9 @@ button {
 
 
 }
-
+.Logo {
+  font-size:30px;
+}
 header {
   display: flex;
   justify-content: space-between;
