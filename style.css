@@ -89,28 +89,27 @@ header {
   .menu-toggle {
     display: block;
     /* 顯示按鈕 */
-    background-color: #333;
-    color: white;
-    border: none;
-    padding: 10px;
     cursor: pointer;
+    padding: 10px;
     margin-top: 10px;
-    transition: background-color 0.3s, color 0.3s;
-    /* 添加過渡效果 */
   }
 
-  .menu-toggle:hover {
-    background-color: #555;
+  .menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: 0.4s;
+  }
+
+  .menu-toggle:hover .bar {
+    background-color: #ffcc00;
     /* 背景色變化 */
-    color: #ffcc00;
-    /* 字體顏色變化 */
   }
 
-  .menu-toggle:active {
+  .menu-toggle:active .bar {
     background-color: #777;
     /* 按下時背景色變化 */
-    color: #fff;
-    /* 按下時字體顏色變化 */
   }
 }
 
